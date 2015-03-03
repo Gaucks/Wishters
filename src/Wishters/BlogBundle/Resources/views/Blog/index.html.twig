@@ -1,0 +1,46 @@
+<div class="whatsup">
+    <h5>Quoi de neuf ?</h5>
+    <form action="#" method="post" rel="{{ app.user.username }}" avatar="{{ app.user.avatar.path }}" class="form-blog">
+        <div class="form-group negative-margin">
+            {{ form_widget(form.content, {'attr': {'class' : 'form-control', 'placeholder' : 'Quoi de neuf la dedans ?'}}) }}
+            {{ form_rest(form) }}
+        </div>
+        <div class="submit negative-margin">
+            <div class="pull-right">
+                <button class="btn btn-submit">Publier</button>
+            </div>
+            <h3 class="text-center">ACTUALITÉS</h3>
+            <div class="clearfix"></div>
+        </div>
+    </form>
+
+    <div class="wrap-blog-actu" role="contentinfo">
+
+        <div id="contenaire-blog">
+
+            {% if posts is defined %}
+                {% for p in posts %}
+                    <div class="row actu" rel="{{ p.id }}">
+
+                        <div class="remove" rel="{{ p.id }}"><a href="#"><i class="fa fa-remove"></i></a></div>
+
+                        <div class="col-md-2 actu-avatar-fil">
+                            <img src="{{ asset('bundles/wishtersblog/images/avatars/'~p.user.avatar.path) }}" alt="#" class="img-responsive img-thumbnail"/>
+                        </div>
+                        <div class="col-md-10 actu-content-fil">
+                            <h3><a href="#">{{ p.user.username }} </a> <span class="pull-right"> {{ p.date|date('d/m/y' ) }}</span> </h3>
+                            <p>{{ p.content }}.</p>
+                        </div>
+                    </div>
+                {% endfor %}
+            {% endif %}
+
+        </div>
+
+        <div class="row actu text-center" >
+            <a href="#" id="more-actu"><i class="fa fa-refresh"></i> Afficher plus</a>
+        </div>
+
+    </div>
+
+</div>

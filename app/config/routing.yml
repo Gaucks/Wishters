@@ -1,0 +1,31 @@
+wishters_user:
+    resource: "@WishtersUserBundle/Resources/config/routing.yml"
+    prefix:   /
+
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+
+wishters_relation:
+    resource: "@WishtersRelationBundle/Resources/config/routing.yml"
+    prefix:   /relation
+
+wishters_localisation:
+    resource: "@WishtersLocalisationBundle/Resources/config/routing.yml"
+    prefix:   /localisation
+
+wishters_tuto:
+    resource: "@WishtersTutoBundle/Resources/config/routing.yml"
+    prefix:   /tutoriel
+
+wishters_blog:
+    resource: "@WishtersBlogBundle/Resources/config/routing.yml"
+    prefix:   /blog
+
+wishters_front:
+    resource: "@WishtersFrontBundle/Resources/config/routing.yml"
+    prefix:   /
+
+fos_js_routing:
+    resource: "@FOSJsRoutingBundle/Resources/config/routing/routing.xml"
+
+

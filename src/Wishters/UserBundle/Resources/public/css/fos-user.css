@@ -1,0 +1,35 @@
+@import url(http://fonts.googleapis.com/css?family=Quicksand);
+
+.wishters-registration{ font-family: 'Quicksand', Arial, cursive; padding-top: 25px }
+
+.register-header{
+    margin-bottom: 25px;
+}
+.register-header h1{
+    font-size: 5em;
+    text-shadow: 1px 1px 5px #000;
+    letter-spacing: 2px;
+    color: #303030;
+    margin-bottom: 0;
+}
+
+.register-header p{
+    color: #999;
+    text-shadow: 2px 1px 2px #000;
+}
+
+
+.headline > p{
+    color: #999;
+    letter-spacing: 2px;
+    line-height: 1em;
+}
+.already-registered a{
+    color: #999;
+}
+
+.already-registered a:hover{
+    color: #ffffff;
+    text-decoration: none;
+}
+

@@ -1,0 +1,12 @@
+{% extends "FOSUserBundle::layout.html.twig" %}
+{% block stylesheets %}
+    {% stylesheets filter='cssrewrite'
+        'bundles/wishtersuser/css/fos-user.css'
+    %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset_url }}"/>
+    {% endstylesheets %}
+{% endblock %}
+{% block body %}
+{% include "FOSUserBundle:Registration:register_content.html.twig" %}
+{% endblock body %}

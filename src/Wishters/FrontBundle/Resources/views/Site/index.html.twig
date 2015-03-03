@@ -1,0 +1,12 @@
+{% extends '::base.html.twig' %}
+{% block body %}
+    {% include 'WishtersFrontBundle:Template:navigation.html.twig' %}
+
+    <div class="col-lg-11 div-no-padding row-wrap">
+        {% include 'WishtersFrontBundle:Template:header.html.twig' %}
+        <div class="col-md-5" id="fil-wrap" role="contentinfo">
+            {{ render(controller('WishtersBlogBundle:Blog:showMyBlog', {'request': app.request})) }}
+        </div>
+        <div class="col-md-7" id="content-wrap" role="contentinfo"></div>
+    </div>
+{% endblock %}

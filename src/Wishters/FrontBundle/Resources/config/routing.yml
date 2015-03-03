@@ -1,0 +1,7 @@
+wishters_front_homepage:
+    path:     /welcome
+    defaults: { _controller: WishtersFrontBundle:Welcome:welcome }
+
+wishters_front_site_homepage:
+    path:     /
+    defaults: { _controller: WishtersFrontBundle:Site:index }

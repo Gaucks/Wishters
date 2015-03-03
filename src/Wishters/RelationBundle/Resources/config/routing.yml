@@ -1,0 +1,3 @@
+wishters_relation_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: WishtersRelationBundle:Default:index }

@@ -1,0 +1,128 @@
+body{
+    font-family: 'proxima_nova','Helvetica Neue',Helvetica,Arial,sans-serif;
+    min-height: 100%;
+    height: 100%;
+    margin: 0;
+    font-size: 12px;
+    line-height: 19px;
+    background: #27292B;
+    color: #ffffff;
+    padding: 0;
+    font-weight: 200;
+}
+html, body, #body, .row-wrap, #navigation,
+#fil-wrap, #content-wrap{
+    height: 100%;
+}
+
+h1{font-size: 1.3em}
+h2{font-size: 1.2em}
+h3{font-size: 1.1em; margin: 0 0 5px 0}
+
+/** Fonctions style globales **/
+.div-no-padding{ padding: 0}
+.negative-margin{  margin: 0 -15px; }
+.btn-radius-30{ border-radius: 30px; }
+.btn-wishters{ background: #5A82A5; color: #FFFFFF; text-shadow: 1px 1px 1px #000; }
+.btn-wishters:hover{ background: #5A82A5; color: #FFFFFF; text-shadow: 1px 1px 1px #000; }
+
+.note{ color: #464545; font-size: 10px; font-style: italic; text-shadow: 1px 1px 1px #000}
+
+/* Espace navigation */
+#navigation{
+    min-height: 100%;
+    border:0;
+    background: #303030
+}
+#navigation .list-group-item:first-child{ padding: 25px 0; background: #5A82A5; }
+#navigation .list-group-item{ border: none; border-radius: 0; cursor: pointer;color: #999; padding-bottom: 5px; font-weight: 200; border-left: 3px solid #303030 }
+#navigation .list-group-item:hover{ color: #f1f1f1; background-color: #303030; border-left: 3px solid transparent}
+#navigation .list-group-item > i{ font-size: 20px; margin-top: 7px;}
+#navigation .list-group-item.active{ color: #ffffff; background-color: #303030; border-left: 3px solid #5A82A5}
+
+/* Blog, whatsup  */
+.whatsup textarea{
+    border-radius: 0;
+    background: #303030;
+    color: #ffffff;
+    padding: 10px 30px;
+    border-left: 3px solid transparent;
+    resize: none;
+    border-bottom: 1px solid #252525;
+    border-top: 1px solid #252525;
+    font-size: 14px;
+}
+.whatsup textarea:focus{
+    border-radius: 0;
+    background: #303030;
+    color: #ffffff;
+    padding: 10px 30px;
+    border-left: 3px solid #464545;
+    border-bottom: 1px solid #252525;
+    border-top: 1px solid #252525;
+}
+.whatsup .submit{
+    font-size: 12px;
+    padding: 5px 10px;
+    border-bottom: 1px solid #303030;
+    position: relative;
+}
+.whatsup h3{ margin-bottom: 0px; line-height: 2em; }
+.whatsup .btn-submit{
+    position: absolute;
+    right: 10px;
+    background: #5A82A5;
+    border:inset 1px #000;
+    font-size: 12px;
+    padding: 4px 15px 3px;
+    text-shadow: #375269 1px 1px 0px;
+}
+
+.wrap-blog-actu, .actu{ position: relative; font-size: 12px; color: #666}
+.wrap-blog-actu .actu{ clear: both; padding: 5px 0;}
+.wrap-blog-actu .actu-content-fil{ border-bottom: 1px solid #252525; padding: 0 10px 5px 0;}
+.wrap-blog-actu .actu-content-fil span{ color: #5A82A5}
+.wrap-blog-actu  a{ color : #5A82A5}
+.wrap-blog-actu  a:hover{ color : #ffffff; text-decoration: none}
+.wrap-blog-actu .remove{ position: absolute; left: 0px; top: 5px; font-size: 20px; display: none; z-index: 99999}
+.wrap-blog-actu .remove > a { cursor: pointer}
+
+/* Header  */
+#header{
+    background: #303030;
+    padding: 10px;
+}
+#header .header-infos { background: none;  line-height: 2.3em;}
+#header .header-infos ul  {margin: 0;}
+#header .header-infos ul > li.list-group-item-text { margin-right: 15px;}
+#header .header-infos ul > li > a { color: #999 ;}
+#header .header-infos ul > li > a.active { color: #fff ;}
+#header .header-infos ul > li > a:hover { color: #ffffff;}
+#header .header-infos ul > li > a > i { font-size: 18px;}
+#header .header-infos .nav > li > a {
+    position: relative;
+    display: block;
+    padding: 0px 15px;
+    font-weight: 400;
+    text-transform: uppercase;
+
+}
+#header .header-infos .nav > li > a:hover, .nav > li > a:focus, .nav > li.active > a  {
+    text-decoration: none;
+    background-color: #303030;
+    color: #FFFFFF;
+    border-radius: 4px;
+}
+
+#header .header-infos p { margin: 0}
+#header .user-avatar { position: relative }
+#header .user-avatar img{ height: 50px; width: 50px; position: absolute; top: -10px; }
+
+
+#fil-wrap{
+}
+#content-wrap{
+    background: gainsboro;
+}
+
+

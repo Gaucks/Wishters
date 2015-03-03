@@ -1,0 +1,53 @@
+{% if pager is defined %}
+    {% for p in pager %}
+        <div class="row actu" rel="{{ p.id }}">
+
+            <div class="remove" rel="{{ p.id }}"><a href="#"><i class="fa fa-remove"></i></a></div>
+
+            <div class="col-md-2 actu-avatar-fil">
+                <img src="{{ asset('bundles/wishtersblog/images/avatars/'~p.user.avatar.path) }}" alt="#" class="img-responsive img-thumbnail"/>
+            </div>
+            <div class="col-md-10 actu-content-fil">
+                <h3><a href="#">{{ p.user.username }} </a> <span class="note pull-right"> {{ p.date|date('d/M/Y' ) }}</span> </h3>
+                <p>{{ p.content }}.</p>
+                <div class="actu-fil-options pull-right">
+                    <a href="#"><i class="fa fa-folder-open"></i></a>
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+{% endif %}
+
+{# Pager #}
+{% if pager.haveToPaginate %}
+    <ul class="pagination">
+        {# back #}
+        {% set state = '' %}
+        {% if  pager.getCurrentPage()  == 1 %}
+            {% set state = 'disabled' %}
+        {% endif %}
+        <li class="{{ state }}"><a onclick="loadTablePage({{ pager.getCurrentPage() -1 }})">&laquo;</a></li>
+
+        {# pages 1 2 3 ... #}
+        {% for givenPage in 1..pager.getNbPages() %}
+            {% set state = '' %}
+            {% if  pager.getCurrentPage()  == givenPage %}
+                {% set state = 'active' %}
+            {% endif %}
+            <li class="{{ state }}"><a onclick="loadTablePage({{ givenPage }})">{{ givenPage }}</a></li>
+        {%  endfor %}
+
+        {# forward #}
+        {% set state = '' %}
+        {% if  pager.getCurrentPage() == pager.getNbPages() %}
+            {% set state = 'disabled' %}
+        {% endif %}
+        <li class="{{ state }}" ><a onclick="loadTablePage({{ pager.getCurrentPage() +1}})">&raquo;</a></li>
+    </ul>
+{% else %}
+    <p>{{ 'No entries found' | trans }}</p>
+{% endif %}
+
+<div class="pagerfanta">{{ pagerfanta(pager, 'default') }}</div>

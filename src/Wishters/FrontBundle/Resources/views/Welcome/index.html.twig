@@ -1,0 +1,18 @@
+{% extends '::base.html.twig' %}
+{% block stylesheets %}
+    {% stylesheets filter='cssrewrite'
+    'bundles/wishtersfront/css/welcome.css'
+    %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset_url }}"/>
+    {% endstylesheets %}
+{% endblock %}
+{% block body %}
+    <div id="headline">
+        <p>Be better with others</p>
+        <p>Discover connections you didn't know existed</p>
+    </div>
+    <div class="col-lg-4 col-lg-offset-4" id="access">
+        <button class="btn btn-rounded"><i class="fa fa-send pull-right"></i> Entrer sur le site...</button>
+    </div>
+{% endblock %}
